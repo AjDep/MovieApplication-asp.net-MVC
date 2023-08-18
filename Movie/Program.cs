@@ -1,7 +1,12 @@
+using Movie.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Add your DbContext configuration here
+builder.Services.AddDbContext<AppDBContext>();
 
 var app = builder.Build();
 
